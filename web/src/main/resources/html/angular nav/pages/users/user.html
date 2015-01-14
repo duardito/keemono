@@ -1,13 +1,13 @@
 
 <form class="form-horizontal" ng-submit="submitShop()" ng-controller="saveShopController">
 <div class="form-group">
-        <label for="nameshop1" class="col-sm-2 control-label">Shop name</label>
-        <div class="col-sm-2">
+        <label for="nameshop1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="SHOP_TEXT">Shop name</label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
             <input type="text" class="form-control"  required ng-model="nameShop" id="nameshop1" placeholder="Shop name">
         </div>
     </div>
 <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-3 col-sm-10">
             <button type="submit" id="submitShop" class="btn btn-primary">Save shop</button>
         </div>
     </div>
@@ -15,35 +15,35 @@
 
 <form  class="form-horizontal" ng-submit="submit()" ng-controller="saveProductController">
     <div class="form-group">
-        <label for="product1" class="col-sm-2 control-label">Product name</label>
-        <div class="col-sm-2">
+        <label for="product1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label">Product name</label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
             <input type="text" class="form-control" required ng-model="nameProduct" id="product1" placeholder="Product name">
         </div>
     </div>
 
     <div class="form-group">
-        <label for="buydate1" class="col-sm-2 control-label">Buy Date</label>
-        <div class="col-sm-2">
+        <label for="buydate1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label">Buy Date</label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
             <input type="date" class="form-control" required ng-model="date" id="buydate1" placeholder="dd-MM-yyyy">
         </div>
     </div>
 
     <div class="form-group">
-        <label for="price1" class="col-sm-2 control-label">Price</label>
-        <div class="col-sm-2">
+        <label for="price1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label">Price</label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
             <input type="text" class="form-control" required ng-model="price" id="price1" placeholder="Price">
         </div>
     </div>
 
     <div class="form-group">
-        <label class="col-sm-2 control-label">Shop</label>
-        <div class="col-sm-2">
+        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label">Shop</label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
             <select class="form-control" ng-model="shop"  ng-options='shop.name for shop in shops' required></select>
         </div>
     </div>
 
     <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
+        <div class="col-sm-offset-3 col-lg-3 col-md-3 col-sm-3 col-xs-2">
             <button type="submit" id="submit" class="btn btn-primary">Save Product</button>
         </div>
     </div>

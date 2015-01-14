@@ -5,14 +5,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">  
     <script src="https://code.angularjs.org/1.3.6/angular.js"></script>
 	<script src="https://code.angularjs.org/1.3.6/angular-route.js"></script>
+	<script src="js/angular-translate.min.js"></script>
 	<script src="js/app.js"></script>
-
+	
 </head>
 
 <body>
 <div class="container-fluid">
   <div class="row">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-include="'header.html'">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-include="'templates/header.html'">
 
   header
   </div>
@@ -29,7 +30,7 @@
   
  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" ng-view>body</div>
   
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:green" ng-include="'footer.html'">footer</div>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:green" ng-include="'templates/footer.html'">footer</div>
 
 </div>
 </div>
