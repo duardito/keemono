@@ -1,0 +1,38 @@
+
+<form class="form-horizontal" ng-submit="submit()" ng-controller="savePageController">
+
+	 <div class="form-group">
+        <label for="pagename1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="PAGE_NAME_TEXT"></label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
+            <input type="text" class="form-control" required ng-model="pagename" id="pagename1"  placeholder="{{'PAGE_NAME_TEXT' | translate}}">
+        </div>
+    </div>
+	
+	<div class="form-group">
+        <label for="headpagename1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="HEAD_PAGE_NAME_TEXT"></label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
+            <textarea type="text" class="form-control" required ng-model="headpage" id="headpagename1"  placeholder="{{'BODY_PAGE_NAME_TEXT' | translate}}"></textarea>
+        </div>
+    </div>
+	
+	<div class="form-group">
+        <label for="bodypagename1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="BODY_PAGE_NAME_TEXT"></label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
+            <textarea type="text" class="form-control" required ng-model="bodypage" id="bodypagename1"  placeholder="{{'BODY_PAGE_NAME_TEXT' | translate}}"></textarea>
+        </div>
+    </div>
+	
+	<div class="form-group">
+        <label for="footerpagename1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="FOOTER_PAGE_NAME_TEXT"></label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
+            <textarea type="text" class="form-control" required ng-model="footerpage" id="footerpagename1"  placeholder="{{'FOOTER_PAGE_NAME_TEXT' | translate}}"></textarea>
+        </div>
+    </div>
+	
+	
+<div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            <button type="submit" id="submit" class="btn btn-primary">{{'SAVE_PAGE_TEXT' | translate}}</button>
+        </div>
+    </div>
+</form>

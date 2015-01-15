@@ -1,74 +1,36 @@
 
-<form class="form-horizontal" ng-submit="submitShop()" ng-controller="saveShopController">
-<div class="form-group">
-        <label for="nameshop1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="SHOP_TEXT">Shop name</label>
+<form class="form-horizontal" ng-submit="submitShop()" ng-controller="saveUserController">
+
+	 <div class="form-group">
+        <label for="username1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="USER_NAME_TEXT"></label>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
-            <input type="text" class="form-control"  required ng-model="nameShop" id="nameshop1" placeholder="Shop name">
+            <input type="text" class="form-control" required ng-model="username" id="username1"  placeholder="{{'USER_NAME_TEXT' | translate}}">
         </div>
     </div>
+	<div class="form-group">
+        <label for="password1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="PASSWORD_TEXT"></label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
+            <input type="password" class="form-control" required ng-model="password" id="password1"  placeholder="{{'PASSWORD_TEXT' | translate}}">
+        </div>
+    </div>
+	
+	<div class="form-group">
+        <label for="email1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="EMAIL_TEXT"></label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
+            <input type="email" class="form-control" required ng-model="email" id="email1"  placeholder="{{'EMAIL_TEXT' | translate}}">
+        </div>
+    </div>
+	
+	<div class="form-group">
+        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label">{{'ROLE_TEXT' | translate}}</label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
+            <select class="form-control" ng-model="role"  ng-options='role.name for role in roles' required></select>
+        </div>
+    </div>
+	
 <div class="form-group">
         <div class="col-sm-offset-3 col-sm-10">
-            <button type="submit" id="submitShop" class="btn btn-primary">Save shop</button>
+            <button type="submit" id="submit" class="btn btn-primary">{{'SAVE_USER_NAME_TEXT' | translate}}</button>
         </div>
     </div>
 </form>
-
-<form  class="form-horizontal" ng-submit="submit()" ng-controller="saveProductController">
-    <div class="form-group">
-        <label for="product1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label">Product name</label>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
-            <input type="text" class="form-control" required ng-model="nameProduct" id="product1" placeholder="Product name">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="buydate1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label">Buy Date</label>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
-            <input type="date" class="form-control" required ng-model="date" id="buydate1" placeholder="dd-MM-yyyy">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label for="price1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label">Price</label>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
-            <input type="text" class="form-control" required ng-model="price" id="price1" placeholder="Price">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label">Shop</label>
-        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
-            <select class="form-control" ng-model="shop"  ng-options='shop.name for shop in shops' required></select>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-sm-offset-3 col-lg-3 col-md-3 col-sm-3 col-xs-2">
-            <button type="submit" id="submit" class="btn btn-primary">Save Product</button>
-        </div>
-    </div>
-</form>
-
-<div id="rest" class="container-fluid" ng-controller="rest">
-    <table height="15px" class="table table-condensed table-bordered table-hover table-striped">
-        <tr>
-            <td class="info">
-                Product
-            </td>
-        </tr>
-        <tr ng-repeat="module in products">
-
-            <td class="info">
-                {{module.name}}
-            </td>
-
-            <td ng-repeat="col in module.shopList">
-                {{col.name}}
-
-                <select ng-model="selected.value" ng-options='pp.total as (  (pp.date | date:"dd/MM/yyyy") + ", "+ pp.price) for pp in col.productAttr'></select>
-
-            </td>
-
-        </tr>
-    </table>
-</div>
