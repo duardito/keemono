@@ -12,7 +12,7 @@ appModule.config(['$routeProvider',
 			templateUrl: 'pages/pages/page.html'
 		  })
 		  .otherwise({
-			redirectTo: '/'
+			redirectTo: '/nav1'
 		  });
 
 	  }

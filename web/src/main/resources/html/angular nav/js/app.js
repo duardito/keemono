@@ -1,5 +1,19 @@
 var appModule = angular.module('myApp', ['ngRoute','pascalprecht.translate']);
-	
+
+
+appModule.controller('loginController',function($scope, $http) {
+
+});
+
+
+	appModule.controller('urlController',function($scope, $http) {
+            $scope.urls = [
+                {"name":"nav1","description":"Login"},
+                {"name":"user","description":"User admin"},
+                {"name":"pages","description":"Pages admin"}
+            ];
+        console.log('urls son', $scope.urls);
+        });
 
 	appModule.controller('rest',function($scope, $http) {
             $scope.selected = {};
@@ -14,8 +28,6 @@ var appModule = angular.module('myApp', ['ngRoute','pascalprecht.translate']);
 
         appModule.controller('saveProductController',function($scope, $http) {
             $scope.submit = function() {
-                console.log('$scope.shop' ,$scope.shop);
-                console.log('$scope.shop.value' ,$scope.shop.value);
                 $http.post('http://31.200.241.46:8080/newvalia/product/save',
                         {"name": $scope.nameProduct,"shopList":[{"name":$scope.shop.id,"productAttr":[{"price":$scope.price,"date":$scope.date}]}]}).
                         success(function(data, status, headers, config) {
@@ -54,7 +66,6 @@ var appModule = angular.module('myApp', ['ngRoute','pascalprecht.translate']);
 
         appModule.controller('saveShopController',function($scope, $http) {
             $scope.submitShop = function() {
-                //
                 $http.post('http://31.200.241.46:8080/newvalia/shop/save',
                         {"name": $scope.nameShop, "id": $scope.nameShop}).
                         success(function(data, status, headers, config) {
