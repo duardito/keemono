@@ -19,6 +19,7 @@
 	<script src="js/navigation.js"></script>
 	<script src="js/users/users.js"></script>
 	<script src="js/pages/pages.js"></script>
+	<script src="js/services.js"></script>
 	
 </head>
 
@@ -26,24 +27,25 @@
 <div class="container">
 
   <div class="row">
+  <!-- header div  -->
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-include="'templates/header.html'"></div>
- 
-  <div ng-controller="urlController" class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-   <ul  class="nav nav-pills nav-stacked">
-        <li ng-repeat="url in urls">
-            <a href="#/{{url.name}}">{{url.description}}</a>
-        </li>
-    </ul>
-  </div>
   
- <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" ng-view>body</div>
+  <!-- navigation div  -->
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-include="'templates/nav.html'"></div>
   
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color:green" ng-include="'templates/footer.html'">footer</div>
+ <!-- left lateral navigation div  -->
+ <div ng-show="!authService.isLoggedIn()">
+	<div  class="col-lg-3 col-md-3 col-sm-3 col-xs-3" ng-include="'templates/left-navigation.html'"></div>
+ </div>
+  <!-- default view  -->
+ <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" ng-view></div>
+  
+  <!-- footer div  -->
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-include="'templates/footer.html'"></div>
 
 </div>
 </div>
 
-	
 </body>
 
 </html>

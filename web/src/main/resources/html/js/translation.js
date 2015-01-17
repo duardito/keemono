@@ -7,7 +7,20 @@ appModule.config(function($translateProvider) {
 	SHOP_TEXT : 'Shop',
 	USER_NAME_TEXT  :'User name',
 	SAVE_USER_NAME_TEXT:'Save',
-	USER_NAV_TEXT :'Users'
+	USER_NAV_TEXT :'Users',
+	PAGE_NAME_TEXT:'Page name',
+	BODY_PAGE_NAME_TEXT:'Body page',
+	FOOTER_PAGE_NAME_TEXT:'Footer page',
+	SAVE_PAGE_TEXT:'Save page',
+	EMAIL_TEXT:'e-mail',
+	ROLE_TEXT:'Role',
+	SAVE_USER_TEXT:'Save user',
+	HEAD_PAGE_NAME_TEXT:'Header page',
+	 PASSWORD_TEXT:'Password',
+	 USER_ADMIN_TEXT:'User Administration',
+	 ADMINISTRATION_TEXT:'Administation'
+	
+	
   })
   .translations('de', {
   BUTTON_TEXT_DE:'englisch',

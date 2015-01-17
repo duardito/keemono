@@ -1,0 +1,7 @@
+ <div ng-controller="urlController">
+   <ul  class="nav nav-pills nav-stacked">
+        <li ng-repeat="url in urls">
+            <a href="#/{{url.name}}">{{url.description}}</a>
+        </li>
+    </ul>
+  </div>
