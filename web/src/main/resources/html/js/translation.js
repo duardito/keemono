@@ -18,7 +18,8 @@ appModule.config(function($translateProvider) {
 	HEAD_PAGE_NAME_TEXT:'Header page',
 	 PASSWORD_TEXT:'Password',
 	 USER_ADMIN_TEXT:'User Administration',
-	 ADMINISTRATION_TEXT:'Administation'
+	 ADMINISTRATION_TEXT:'Administation',
+	 CHOOSE_TEXT:'Choose'
 	
 	
   })
