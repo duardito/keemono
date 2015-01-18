@@ -2,17 +2,17 @@ appModule.config(['$routeProvider',
 	  function($routeProvider) {
 
 		$routeProvider
-		  .when('/nav1', {
-			templateUrl: 'nav1.html'
+		  .when('/login', {
+			templateUrl: 'components/login/login.html'
 		  })
 		  .when('/user', {
-			templateUrl: 'pages/users/user.html'
+			templateUrl: 'components/users/user.html'
 		  })
 		  .when('/pages', {
-			templateUrl: 'pages/pages/page.html'
+			templateUrl: 'components/pages/page.html'
 		  })
 		  .otherwise({
-			redirectTo: '/nav1'
+			redirectTo: '/'
 		  });
 
 	  }

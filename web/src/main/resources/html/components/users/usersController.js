@@ -1,6 +1,5 @@
 	appModule.controller('saveUserController',function($scope, $http) {
 	$scope.submit = function() {
-		//
 		$http.post('http://31.200.241.46:8080/admin/user/save',
 				{"username": $scope.username, "password": $scope.password, "email" : $scope.email, "role" :$scope.role.name}).
 				success(function(data, status, headers, config) {

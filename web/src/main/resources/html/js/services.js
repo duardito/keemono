@@ -1,7 +1,7 @@
 'use strict';
 
 // simple stub that could use a lot of work...
-myApp.factory('RESTService',
+appModule.factory('RESTService',
     function ($http) {
         return {
             get:function (url, callback) {
@@ -20,7 +20,7 @@ myApp.factory('RESTService',
 
 
 // simple auth service that can use a lot of work... 
-myApp.factory('AuthService',
+appModule.factory('AuthService',
     function () {
         var currentUser = null;
         var authorized = false;

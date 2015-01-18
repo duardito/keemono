@@ -1,0 +1,20 @@
+<form class="form-horizontal" ng-submit="submit()" ng-controller="loginController">
+	<div class="form-group">
+        <label for="username1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="USER_NAME_TEXT"></label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
+            <input type="text" class="form-control" required ng-model="username" id="username1"  placeholder="{{'USER_NAME_TEXT' | translate}}">
+        </div>
+    </div>
+	<div class="form-group">
+        <label for="password1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="PASSWORD_TEXT"></label>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-2">
+            <input type="password" class="form-control" required ng-model="password" id="password1"  placeholder="{{'PASSWORD_TEXT' | translate}}">
+        </div>
+    </div>
+	
+	<div class="form-group">
+        <div class="col-sm-offset-3 col-sm-10">
+            <button type="submit" id="submit" class="btn btn-primary">{{'LOGIN_BUTTON_TEXT' | translate}}</button>
+        </div>
+    </div>
+</form>
