@@ -1,7 +1,4 @@
-package com.keemono.dao.entities.generic;
-
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Field;
+package com.keemono.common.bean.entities.generic;
 
 import java.io.Serializable;
 
@@ -9,15 +6,12 @@ import java.io.Serializable;
  * generic document for all the rest of the documents, it will contain generic fields
  * Created by edu on 12/01/2015.
  */
-public class AbstractDocument implements Serializable{
+public class AbstractDocumentVO implements Serializable{
 
-    @Id
     private String id;
 
-    @Field
     private String name;
 
-    @Field
     private String url;
 
     public String getId() {

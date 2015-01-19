@@ -10,6 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>common</artifactId>
-
+<dependencies>
+    <dependency>
+        <groupId>net.sf.dozer</groupId>
+        <artifactId>dozer</artifactId>
+    </dependency>
+</dependencies>
 
 </project>
