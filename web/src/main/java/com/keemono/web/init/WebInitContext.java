@@ -1,5 +1,6 @@
 package com.keemono.web.init;
 
+import com.keemono.web.config.WebConfiguration;
 import com.keemono.web.filters.SimpleCORSFilter;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.DelegatingFilterProxy;
@@ -15,7 +16,7 @@ public class WebInitContext extends
 
         @Override
         protected Class<?>[] getRootConfigClasses() {
-                return new Class<?>[0];
+                return new Class<?>[]{WebConfiguration.class};
         }
 
         @Override
@@ -47,9 +48,8 @@ public class WebInitContext extends
                 return new Filter[] {securityFilterChain,simpleCORSFilter ,characterEncodingFilter };
         }
 
-
         @Override
         protected String[] getServletMappings() {
-                return new String[0];
+                return new String[] {"/" };
         }
 }

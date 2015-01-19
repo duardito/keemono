@@ -1,6 +1,6 @@
 	appModule.controller('savePageController',function($scope, $http) {
 	$scope.submit = function() {
-		$http.post('http://31.200.241.46:8080/admin/page/save',
+		$http.post('http://localhost:8080/page/save',
 				{"pagename": $scope.pagename,
 				"headpage": $scope.headpage,
 				"bodypage" : $scope.bodypage, 

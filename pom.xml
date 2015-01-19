@@ -7,9 +7,11 @@
     <groupId>com.keemono</groupId>
     <artifactId>keemono</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>${global.version}</version>
 
     <properties>
+        <global.version>1.0-SNAPSHOT</global.version>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
         <java-version>1.8</java-version>
