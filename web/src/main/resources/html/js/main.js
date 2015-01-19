@@ -1,8 +1,5 @@
 var appModule = angular.module('myApp', ['ngRoute','pascalprecht.translate','ui.router']);
 
-		
-		
-
 	appModule.controller('rest',function($scope, $http) {
             $scope.selected = {};
             $http.get('http://31.200.241.46:8080/newvalia/product/findAll').

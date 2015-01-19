@@ -3,7 +3,9 @@
             $scope.urls = [
                 {"name":"login","description":"Login"},
                 {"name":"user","description":"User admin"},
-                {"name":"pages","description":"Pages admin"}
+                {"name":"page","description":"Pages admin"},
+				{"name":"userList","description":"User list"},
+				{"name":"pageList","description":"Page list"}
             ];
         console.log('urls son', $scope.urls);
         });

@@ -1,0 +1,29 @@
+<div id="rest" class="container-fluid" ng-controller="userListController">
+    <table height="15px" class="table table-condensed table-bordered table-hover table-striped">
+        <tr>
+            <td class="info">
+                {{'USER_NAME_TEXT' | translate}}
+            </td>
+			<td class="info">
+                {{'EMAIL_TEXT' | translate}}
+            </td>
+			<td class="info">
+                {{'ROLE_TEXT' | translate}}
+            </td>
+        </tr>
+        <tr ng-repeat="user in userList">
+
+            <td class="info">
+                {{module.name}}
+            </td>
+
+            <td ng-repeat="col in module.shopList">
+                {{col.name}}
+
+                <select ng-model="selected.value" ng-options='pp.total as (  (pp.date | date:"dd/MM/yyyy") + ", "+ pp.price) for pp in col.productAttr'></select>
+
+            </td>
+
+        </tr>
+    </table>
+</div>

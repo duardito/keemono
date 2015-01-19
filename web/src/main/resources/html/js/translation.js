@@ -14,14 +14,16 @@ appModule.config(function($translateProvider) {
 	SAVE_PAGE_TEXT:'Save page',
 	EMAIL_TEXT:'e-mail',
 	ROLE_TEXT:'Role',
-	SAVE_USER_TEXT:'Save user',
+	SAVE_USER_TEXT:'Add user',
 	HEAD_PAGE_NAME_TEXT:'Header page',
 	 PASSWORD_TEXT:'Password',
 	 USER_ADMIN_TEXT:'User Administration',
 	 ADMINISTRATION_TEXT:'Administation',
-	 CHOOSE_TEXT:'Choose'
-	
-	
+	 CHOOSE_TEXT:'Choose',
+	 USER_LIST_TEXT:'User list',
+	 PAGE_ADMIN_TEXT:'Page administartion',
+	 PAGE_LIST_TEXT: 'Page List',
+	 LOGIN_TEXT: 'Login'
   })
   .translations('de', {
   BUTTON_TEXT_DE:'englisch',
