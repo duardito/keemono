@@ -20,10 +20,21 @@ appModule.config(['$routeProvider',
 		  })
 		  .when('/page', {
 			templateUrl: 'components/pages/page.html'
-		  })
-		  .otherwise({
-			redirectTo: '/welcome'
-		  });
+		  }).when('/empty', {
+				templateUrl: 'empty.html'
+			}).when('/:name', {
+				templateUrl: 'empty.html',
+				controller: PagesController });
+		 ;
 
 	  }
 	]);
+function PagesController($scope, $http, $route, $routeParams, $compile) {
+	$route.current.templateUrl = '' + $routeParams.name + ".html";
+console.log(' sirr ', $route.current.templateUrl);
+	$http.get($route.current.templateUrl).then(function (msg) {
+		$('#views').html($compile(msg.data)($scope));
+	});
+}
+PagesController.$inject = ['$scope', '$http', '$route', '$routeParams', '$compile'];
+

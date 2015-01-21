@@ -11,4 +11,5 @@ public interface PagesServiceI {
 
     public void save(HtmlPageVO htmlPageVO);
     public List <HtmlPageVO>findAll();
+    public HtmlPageVO findByName(final String name);
 }

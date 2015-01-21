@@ -33,4 +33,14 @@ public class PagesServiceImpl implements PagesServiceI{
         final List<HtmlPage> list = htmlPageRepository.findAll();
         return dozerI.map(new DozerBeanMapper(), list, HtmlPageVO.class);
     }
+
+    @Override
+    public HtmlPageVO findByName(String name) {
+        final HtmlPage htmlPage = htmlPageRepository.findByName(name);
+        if(htmlPage == null){
+            return null;
+        }
+        final HtmlPageVO htmlPageVO = dozerI.map(htmlPage,HtmlPageVO.class);
+        return htmlPageVO;
+    }
 }

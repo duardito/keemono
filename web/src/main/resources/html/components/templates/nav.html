@@ -1,8 +1,14 @@
 <nav class="navbar navbar-custom">
    <div ng-controller="navUrlController" class="navbar-header">
       <ul class="nav navbar-nav">
+
+          <li >
+              <a href="#/welcome">welcome</a>
+          </li>
+
+
         <li ng-repeat="url in urls">
-		<a href="#/{{url.name}}">{{url.description}}</a>
+		<a href="#/{{url.name}}">{{url.name}}</a>
 		</li>
       </ul>
 	  </div>

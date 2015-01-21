@@ -4,10 +4,7 @@ import com.keemono.common.bean.entities.htmlpage.HtmlPageVO;
 import com.keemono.service.pages.PagesServiceI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -35,5 +32,11 @@ public class PagesIntegrationImpl implements PagesIntregationI{
     @Override
     public List<HtmlPageVO> findAll() {
         return pagesServiceI.findAll();
+    }
+
+    @RequestMapping(value = "/page/findByName/{name}", method = RequestMethod.GET, produces = "application/json")
+    @Override
+    public HtmlPageVO findByName(@PathVariable String name) {
+        return pagesServiceI.findByName(name);
     }
 }
