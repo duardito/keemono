@@ -7,5 +7,4 @@
 				{"name":"userList","description":"User list"},
 				{"name":"pageList","description":"Page list"}
             ];
-        console.log('urls son', $scope.urls);
         });

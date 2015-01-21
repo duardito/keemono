@@ -1,4 +1,4 @@
-	appModule.controller('savePageController',function($scope, $http) {
+	appModule.controller('savePageController',function($scope, $http,$route) {
 	$scope.submit = function() {
 		$http.post('http://localhost:9000/keemono/page/save',
 				{"name": $scope.pagename,

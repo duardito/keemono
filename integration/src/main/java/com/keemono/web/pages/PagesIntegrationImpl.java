@@ -24,6 +24,7 @@ public class PagesIntegrationImpl implements PagesIntregationI{
 
     //TODO : still required to add validation to requestbody
     @RequestMapping(value = "/page/save", method = RequestMethod.POST, produces = "application/json")
+    @ResponseBody
     @Override
     public void save(@RequestBody HtmlPageVO htmlPageVO) {
         pagesServiceI.save(htmlPageVO);
