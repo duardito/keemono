@@ -34,6 +34,16 @@
                 <artifactId>dao</artifactId>
                 <version>${global.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.keemono</groupId>
+                <artifactId>integration</artifactId>
+                <version>${global.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.keemono</groupId>
+                <artifactId>common</artifactId>
+                <version>${global.version}</version>
+            </dependency>
         </dependencies>
 
 </project>

@@ -2,6 +2,7 @@ package com.keemono.common.utils.dozer;
 
 import org.dozer.DozerBeanMapper;
 import org.dozer.Mapper;
+import org.springframework.context.annotation.Configuration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 /**
  * Created by edu on 19/01/2015.
  */
+@Configuration
 public class DozerImpl<M> implements DozerI<M> {
 
     public <M> M map (final Object sourceObject, final Class<M> destType){

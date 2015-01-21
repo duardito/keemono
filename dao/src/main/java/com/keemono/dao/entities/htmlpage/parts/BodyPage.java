@@ -8,4 +8,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Document(collection="body")
 public class BodyPage extends AbstractDocument {
+
+    private String bodyContent;
+
+    public String getBodyContent() {
+        return bodyContent;
+    }
+
+    public void setBodyContent(String bodyContent) {
+        this.bodyContent = bodyContent;
+    }
 }

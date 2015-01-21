@@ -15,7 +15,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 @EnableTransactionManagement
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = "com.keemono.web", useDefaultFilters = false, includeFilters = {@ComponentScan.Filter(RestController.class),@ComponentScan.Filter(Controller.class)})
+@ComponentScan(basePackages = "com.keemono", useDefaultFilters = false, includeFilters = {@ComponentScan.Filter(RestController.class),@ComponentScan.Filter(Controller.class)})
 public class WebMvcConfig extends WebMvcConfigurationSupport {
 
     @Override

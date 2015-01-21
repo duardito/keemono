@@ -8,4 +8,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Document(collection="left")
 public class LeftPart extends AbstractDocument {
+
+    private String leftContent;
+
+    public String getLeftContent() {
+        return leftContent;
+    }
+
+    public void setLeftContent(String leftContent) {
+        this.leftContent = leftContent;
+    }
 }

@@ -2,7 +2,6 @@ package com.keemono.dao.entities.htmlpage;
 
 import com.keemono.dao.entities.generic.AbstractDocument;
 import com.keemono.dao.entities.htmlpage.parts.*;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
@@ -13,19 +12,19 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection="htmlpages")
 public class HtmlPage extends AbstractDocument{
 
-    @DBRef
+
     private BodyPage bodyPage;
 
-    @DBRef
+
     private FooterPage footerPage;
 
-    @DBRef
+
     private HeaderPage headerPage;
 
-    @DBRef
+
     private RightPart rightPart;
 
-    @DBRef
+
     private LeftPart leftPart;
 
     public BodyPage getBodyPage() {

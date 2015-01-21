@@ -15,7 +15,8 @@ appModule.config(['$routeProvider',
 			templateUrl: 'components/users/userList.html'
 		  })
 		  .when('/pageList', {
-			templateUrl: 'components/pages/pageList.html'
+			templateUrl: 'components/pages/pageList.html',
+			controller:'pageListController'
 		  })
 		  .when('/page', {
 			templateUrl: 'components/pages/page.html'

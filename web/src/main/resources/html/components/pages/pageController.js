@@ -1,11 +1,12 @@
 	appModule.controller('savePageController',function($scope, $http) {
 	$scope.submit = function() {
-		$http.post('http://localhost:8080/page/save',
-				{"pagename": $scope.pagename,
-				"headpage": $scope.headpage,
-				"bodypage" : $scope.bodypage, 
-				"footerpage" :$scope.footerpage}).
+		$http.post('http://localhost:9000/keemono/page/save',
+				{"name": $scope.pagename,
+				"headerPage": {headerContent:$scope.headpage},
+				"bodyPage" :  {bodyContent : $scope.bodypage},
+				"footerPage" :{footerContent:$scope.footerpage}}).
 				success(function(data, status, headers, config) {
+					$route.reload();
 					// this callback will be called asynchronously
 					// when the response is available
 				}).

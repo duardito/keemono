@@ -8,4 +8,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Document(collection="footer")
 public class FooterPage extends AbstractDocument {
+
+    private String footerContent;
+
+    public String getFooterContent() {
+        return footerContent;
+    }
+
+    public void setFooterContent(String footerContent) {
+        this.footerContent = footerContent;
+    }
 }

@@ -1,4 +1,4 @@
-package com.keemono.web.config;
+package com.keemono.web;
 
 import com.keemono.core.config.PropertyLoader;
 import com.keemono.dao.DaoConfiguration;
@@ -14,7 +14,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @EnableMongoRepositories(basePackageClasses = {DaoConfiguration.class})
 @PropertySource("classpath:config/mongo.properties")
 @ComponentScan(basePackages = {
-        "com.keemono.*",} )
+        "com.keemono",
+        "com.keemono.web",} )
 @Import({PropertyLoader.class})
 @Configuration
 public interface WebConfiguration {

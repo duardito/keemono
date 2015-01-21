@@ -1,6 +1,9 @@
 package com.keemono.web.init;
 
-import com.keemono.web.config.WebConfiguration;
+import com.keemono.common.CommonConfig;
+import com.keemono.service.ServiceConfig;
+import com.keemono.web.IntegrationConfig;
+import com.keemono.web.WebConfiguration;
 import com.keemono.web.filters.SimpleCORSFilter;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.DelegatingFilterProxy;
@@ -16,7 +19,7 @@ public class WebInitContext extends
 
         @Override
         protected Class<?>[] getRootConfigClasses() {
-                return new Class<?>[]{WebConfiguration.class};
+                return new Class<?>[]{WebConfiguration.class, IntegrationConfig.class, ServiceConfig.class, CommonConfig.class};
         }
 
         @Override

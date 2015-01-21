@@ -2,10 +2,7 @@ package com.keemono.core.config;
 
 import com.mongodb.MongoClient;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.*;
 import org.springframework.data.authentication.UserCredentials;
 import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -14,6 +11,7 @@ import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 /**
  * Created by edu on 12/01/2015.
  */
+@Import({PropertyLoader.class})
 @PropertySource("classpath:config/mongo.properties")
 @Configuration
 public class MongoConnection {

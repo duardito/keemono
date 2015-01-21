@@ -8,4 +8,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Document(collection="header")
 public class HeaderPage extends AbstractDocument {
+
+    private String headerContent;
+
+    public String getHeaderContent() {
+        return headerContent;
+    }
+
+    public void setHeaderContent(String headerContent) {
+        this.headerContent = headerContent;
+    }
 }
