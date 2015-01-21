@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @EnableMongoRepositories(basePackageClasses = {DaoConfiguration.class})
 @PropertySource("classpath:config/mongo.properties")
 @ComponentScan(basePackages = {
-        "com.keemono.web.*",} )
+        "com.keemono.*",} )
 @Import({PropertyLoader.class})
 @Configuration
 public interface WebConfiguration {
