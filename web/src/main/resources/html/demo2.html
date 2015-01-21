@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div2 {width:200px;height:90px;padding:10px;border:1px solid #aaaaaa;}
+#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+.sir {
+	height:inherit;
+	width:inherit;
+}
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<p>Drag the ccccccccccccccc the rectangle:</p>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" class="sir" src="1.png" draggable="true" ondragstart="drag(event)" width="203" height="215">
+<table class="sir" draggable="true" ondragstart="drag(event)" id="lalala"><tr><td>td primero</td></tr><tr><td>debajo del titulo</td></tr> </table>
+<table class="sir" draggable="true" ondragstart="drag(event)" id="lololo"><tr><td>td sec</td></tr><tr><td>nor debajo del titulo</td></tr> </table>
+</body>
+</html>

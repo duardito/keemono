@@ -25,7 +25,7 @@
         <javax.servlet.version>3.1.0</javax.servlet.version>
 
         <tomcat.maven.version>2.2</tomcat.maven.version>
-        <tomcat.port>8080</tomcat.port>
+        <tomcat.port>9000</tomcat.port>
 
         <shiro.version>1.2.3</shiro.version>
 
