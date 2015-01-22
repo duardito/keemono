@@ -34,7 +34,7 @@ public class PagesIntegrationImpl implements PagesIntregationI{
         return pagesServiceI.findAll();
     }
 
-    @RequestMapping(value = "/page/findByName/{name}", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/page/findByName/{name}", method = RequestMethod.GET, produces={"text/html"})
     @Override
     public HtmlPageVO findByName(@PathVariable String name) {
         return pagesServiceI.findByName(name);
