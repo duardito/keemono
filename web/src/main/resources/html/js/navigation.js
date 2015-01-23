@@ -1,5 +1,5 @@
-appModule.config(['$routeProvider',
-	  function($routeProvider) {
+appModule.config(['$routeProvider','$locationProvider',
+	  function($routeProvider, $locationProvider) {
 
 		$routeProvider
 		.when('/welcome', {
@@ -25,10 +25,10 @@ appModule.config(['$routeProvider',
 			}).when('/:name', {
 				templateUrl: 'empty.html',
 				controller: PagesController });
-		 ;
 
 	  }
 	]);
+
 function PagesController($scope, $http, $route, $routeParams, $compile) {
 	/**$route.current.templateUrl = '' + $routeParams.name + ".html";**/
 	$route.current.templateUrl =  "empty.html";

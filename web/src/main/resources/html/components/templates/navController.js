@@ -13,14 +13,6 @@ appModule.controller('navUrlController',function($scope, $http) {
 
 });
 
-appModule.factory("Hotel", function ($resource) {
-    return $resource("http://localhost:9000/keemono/page/findByName", {name: "@name"}, {
-        update: {
-            method: 'PUT'
-        }
-    });
-});
-
 appModule.controller('empty',function($scope, $http,$resource, $location) {
 
     var theId = $location.path();
