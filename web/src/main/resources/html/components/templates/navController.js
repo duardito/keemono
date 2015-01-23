@@ -12,3 +12,18 @@ appModule.controller('navUrlController',function($scope, $http) {
         });
 
 });
+
+
+appModule.controller('empty',function($scope, $http) {
+    $http.get('http://localhost:9000/keemono/page/findByName').
+        success(function(data) {
+            $scope.empty= {"div" :data} ;
+            // this callback will be called asynchronously
+            // when the response is available
+        }).
+        error(function(data) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+        });
+
+});

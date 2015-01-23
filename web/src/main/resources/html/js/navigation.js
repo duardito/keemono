@@ -30,9 +30,10 @@ appModule.config(['$routeProvider',
 	  }
 	]);
 function PagesController($scope, $http, $route, $routeParams, $compile) {
-	$route.current.templateUrl = '' + $routeParams.name + ".html";
-console.log(' sirr ', $route.current.templateUrl);
+	/**$route.current.templateUrl = '' + $routeParams.name + ".html";**/
+	$route.current.templateUrl =  "empty.html";
 	$http.get($route.current.templateUrl).then(function (msg) {
+		console.log('data' ,msg);
 		$('#views').html($compile(msg.data)($scope));
 	});
 }

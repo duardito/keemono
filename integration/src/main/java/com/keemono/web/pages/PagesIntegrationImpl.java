@@ -37,6 +37,7 @@ public class PagesIntegrationImpl implements PagesIntregationI{
     @RequestMapping(value = "/page/findByName/{name}", method = RequestMethod.GET, produces={"text/html"})
     @Override
     public HtmlPageVO findByName(@PathVariable String name) {
-        return pagesServiceI.findByName(name);
+        final HtmlPageVO  htmlPageVO = pagesServiceI.findByName(name);
+        return htmlPageVO;
     }
 }
