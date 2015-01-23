@@ -1,4 +1,4 @@
-var appModule = angular.module('myApp', ['ngRoute','pascalprecht.translate','ui.router','ngDragDrop','ngSanitize']);
+var appModule = angular.module('myApp', ['ngRoute','pascalprecht.translate','ui.router','ngDragDrop','ngSanitize','ngResource']);
 
 appModule.controller('oneCtrl', function($scope, $timeout) {
         $scope.list1 = [];
