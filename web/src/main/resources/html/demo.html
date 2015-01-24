@@ -87,7 +87,7 @@ document.addEventListener("dragend", function(event) {
 
 // When the draggable p element enters the droptarget, change the DIVS's border style
 document.addEventListener("dragenter", function(event) {
-    if ( event.target.className == "droptarget1" || event.target.className == "droptarget") {
+    if ( event.target.className == "droptarget1" || event.target.className == "droptarget" || event.target.className == "pepito") {
         event.target.style.border = "3px dotted red";
     }
 });
@@ -99,7 +99,7 @@ document.addEventListener("dragover", function(event) {
 
 // When the draggable p element leaves the droptarget, reset the DIVS's border style
 document.addEventListener("dragleave", function(event) {
-    if ( event.target.className == "droptarget1" || event.target.className == "droptarget") {
+    if ( event.target.className == "droptarget1" || event.target.className == "droptarget" || event.target.className == "pepito") {
         event.target.style.border = "";
     }
 });
@@ -112,10 +112,11 @@ document.addEventListener("dragleave", function(event) {
 */
 document.addEventListener("drop", function(event) {
     event.preventDefault();
-    if ( event.target.className == "droptarget1" || event.target.className == "droptarget" ) {
+    if ( event.target.className == "droptarget1" || event.target.className == "droptarget" || event.target.className == "pepito" ) {
         document.getElementById("demo").style.color = "";
         event.target.style.border = "";
         var data = event.dataTransfer.getData("Text");
+        console.log('document.getElementById(data)',document.getElementById(data));
         event.target.appendChild(document.getElementById(data));
     }
 });

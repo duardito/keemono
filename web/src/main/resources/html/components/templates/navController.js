@@ -15,6 +15,7 @@ appModule.controller('navUrlController',function($scope, $http) {
 
 appModule.controller('empty',function($scope, $http,$resource, $location) {
 
+
     var theId = $location.path();
     var lastParam = theId.substring(1, theId.size);
     var value = $resource('http://localhost:9000/keemono/page/findByName/:name');
