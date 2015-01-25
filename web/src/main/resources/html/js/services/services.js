@@ -1,5 +1,4 @@
 'use strict';
-
 // simple stub that could use a lot of work...
 appModule.factory('RESTService',
     function ($http) {
@@ -18,8 +17,19 @@ appModule.factory('RESTService',
     }
 );
 
+appModule.factory('testFactory', function(){
+    return {
+        sayHello: function(text){
+            return "Factory says \"Hello " + text + "\"";
+        },
+        sayGoodbye: function(text){
+            return "Factory says \"Goodbye " + text + "\"";
+        }
+    }
+});
 
-// simple auth service that can use a lot of work... 
+
+// simple auth service that can use a lot of work...
 appModule.factory('AuthService',
     function () {
         var currentUser = null;

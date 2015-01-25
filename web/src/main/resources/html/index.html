@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="" lang="en" ng-app="myApp">
+<html class="" lang="en" >
 <head>
 
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -15,9 +15,10 @@
 	<script src="assets/js/dragAndDrop.js"></script>
 
 	<script src="assets/js/bootstrap.js"></script>
-    
+
 
     <script src="js/angular.js"></script>
+
 	<script src="js/angular-resource.js"></script>
 
 
@@ -25,7 +26,10 @@
 	<script src="js/angular-route.js"></script>
 	<script src="js/angular-ui-router.js"></script>
 	<script src="js/angular-translate.min.js"></script>
+
 	<script src="js/main.js"></script>
+	<script src="js/services/services.js"></script>
+	<script src="js/filters/filters.js"></script>
 	<script src="js/translation.js"></script>
 	<script src="js/navigation.js"></script>
 	<script src="js/angular-dragdrop.js"></script>
@@ -38,13 +42,11 @@
 	
 	<script src="components/templates/left-navigationController.js"></script>
 	<script src="components/templates/navController.js"></script>
-	
-	<script src="js/services.js"></script>
 
 	
 </head>
 
-<body>
+<body ng-app="myApp">
 <div class="container">
 
   <div class="row">
@@ -55,14 +57,14 @@
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" ng-include="'components/templates/nav.html'"></div>
   
  <!-- left lateral navigation div  -->
- <div ng-show="!authService.isLoggedIn()">
+ <div ng-show="authService.isLoggedIn()">
 	<div  class="col-lg-3 col-md-3 col-sm-3 col-xs-3" ng-include="'components/templates/left-navigation.html'"></div>
  </div>
 
   <!-- default view  -->
  <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" ng-cloak ng-view></div>
  
- <div class="row-fluid col-lg-2 col-md-2 col-sm-2 col-xs-2" ng-controller="oneCtrl" ng-cloak>
+ <div class="row-fluid col-lg-2 col-md-2 col-sm-2 col-xs-2"  ng-cloak>
  </div>
   
   <!-- footer div  -->
