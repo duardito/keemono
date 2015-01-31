@@ -16,7 +16,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @ComponentScan(basePackages = {
         "com.keemono",
         "com.keemono.web",} )
-@Import({PropertyLoader.class})
+@Import({PropertyLoader.class,})
 @Configuration
 public interface WebConfiguration {
 }

@@ -1,22 +1,22 @@
 package com.keemono.security;
 
-import com.keemono.dao.entities.users.User;
-import com.keemono.dao.repositories.users.UsersRepository;
+import com.keemono.common.bean.entities.user.UserVO;
+import com.keemono.common.exceptions.ServiceErrors;
+import com.keemono.service.users.UsersServiceI;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
-
-import javax.annotation.Resource;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Created by edu on 12/01/2015.
  */
 public class UserRealm extends AuthorizingRealm {
 
-    @Resource
-    private UsersRepository usersRepository;
+    @Autowired
+    private UsersServiceI usersServiceI;
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
@@ -30,19 +30,23 @@ public class UserRealm extends AuthorizingRealm {
 
         final String password =
                 new String(((UsernamePasswordToken) token).getPassword());
-        final User user = new User();
+        UserVO user = new UserVO();
 
         user.setUsername(username);
         user.setPassword(password);
 
-        final User userForLogin = usersRepository.findByUser(user);
-        if(userForLogin == null){
-            throw new AuthenticationException("not exists");
+        try {
+            user = usersServiceI.login(user);
+            if(user == null){
+                throw new AuthenticationException("not exists");
+            }
+        } catch (ServiceErrors serviceErrors) {
+            serviceErrors.printStackTrace();
         }
 
         AuthenticationInfo oAccount =
-                new SimpleAuthenticationInfo( userForLogin,
-                        ByteSource.Util.bytes(userForLogin.getPassword()), "usernamePasswordRealm");
+                new SimpleAuthenticationInfo( user,
+                        ByteSource.Util.bytes(user.getPassword()), "usernamePasswordRealm");
         return oAccount;
     }
 }

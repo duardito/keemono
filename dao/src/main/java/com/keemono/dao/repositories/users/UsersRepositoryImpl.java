@@ -15,7 +15,7 @@ public class UsersRepositoryImpl implements UsersRepositoryCustom {
     private MongoTemplate mongoTemplate;
 
     @Override
-    public User findByUser(final User user) {
+    public User login(final User user) {
         final Query query = new Query();
         query.addCriteria(Criteria.where("password").is(user.getPassword()).and("username").is(user.getUsername()));
         return mongoTemplate.findOne(query, User.class);

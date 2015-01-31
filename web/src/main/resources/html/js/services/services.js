@@ -30,8 +30,7 @@ appModule.factory('testFactory', function(){
 
 
 // simple auth service that can use a lot of work...
-appModule.factory('AuthService',
-    function () {
+appModule.factory('AuthService', function ($rootScope) {
         var currentUser = null;
         var authorized = false;
 
@@ -44,6 +43,7 @@ appModule.factory('AuthService',
                 return initialState;
             },
             login:function (name, password) {
+
                 currentUser = name;
                 authorized = true;
                 //console.log("Logged in as " + name);

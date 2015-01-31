@@ -9,6 +9,6 @@ import java.io.Serializable;
  */
 public interface UsersRepositoryCustom <M, S extends Serializable>{
 
-    public M findByUser(User user);
+    public M login(User user);
 }
 

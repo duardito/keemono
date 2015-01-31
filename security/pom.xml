@@ -14,7 +14,7 @@
     <dependencies>
         <dependency>
             <groupId>com.keemono</groupId>
-            <artifactId>dao</artifactId>
+            <artifactId>service</artifactId>
             <version>${global.version}</version>
         </dependency>
     </dependencies>

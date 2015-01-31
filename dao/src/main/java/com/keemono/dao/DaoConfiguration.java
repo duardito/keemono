@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 /**
  * Created by edu on 12/01/2015.
  */
-@EnableMongoRepositories
+@EnableMongoRepositories(basePackages = "com.keemono.dao.repositories")
 @ComponentScan
 @Import({MongoConnection.class})
 @Configuration
