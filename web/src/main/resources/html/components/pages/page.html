@@ -1,5 +1,3 @@
-
-  
 <form class="form-horizontal" ng-submit="submit()" ng-controller="savePageController">
 
 	 <div class="form-group">
@@ -8,6 +6,20 @@
             <input type="text" class="form-control" required ng-model="pagename" id="pagename1"  placeholder="{{'PAGE_NAME_TEXT' | translate}}">
         </div>
     </div>
+
+    <div class="form-group">
+        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label">{{'LAYOUT_TEXT' | translate}}</label>
+        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-2">
+            <ul>
+                <li ng-repeat="layout in layouts">
+                    <label>
+                        <input type="radio" ng-model="$parent.name" name="name"  required />&nbsp;<img src="{{layout.img}}"/>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 	
 	<div class="form-group">
         <label for="headpagename1" class="col-lg-3 col-md-3 col-sm-3 col-xs-2 control-label" translate="HEAD_PAGE_NAME_TEXT"></label>

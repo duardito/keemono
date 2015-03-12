@@ -33,6 +33,6 @@ public class MongoConnection {
 
     @Bean
     public MongoTemplate mongoTemplate() throws Exception {
-        return new MongoTemplate(this.mongoDbFactory());
+        return new MongoTemplate(mongoDbFactory());
     }
 }

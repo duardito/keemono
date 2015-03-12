@@ -12,7 +12,7 @@ appModule.controller('loginController',function($scope, $http, $route) {
 				},
 				login:function () {
 
-					$http.post('http://31.200.241.46:8080/keemono/login',
+					$http.post('http://localhost:8080/keemono/login',
 						{"username": $scope.username, "password": $scope.password}).
 						success(function(data, status, headers, config) {
 
@@ -28,7 +28,10 @@ appModule.controller('loginController',function($scope, $http, $route) {
 						}).
 						error(function(data, status, headers, config) {
 
-
+							currentUser = name;
+							authorized = true;
+							//console.log("Logged in as " + name);
+							initialState = false;
 							console.log('errrrrrrr');
 							$route.reload();
 							// called asynchronously if an error occurs

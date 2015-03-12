@@ -24,7 +24,7 @@ appModule.run(function ($rootScope, $location, $http, $timeout, AuthService) {
     // *****
     // Eager load some data using simple REST client
     // *****
-
+    $rootScope.login
 
     // async load constants
     $rootScope.constants = [];
@@ -77,15 +77,5 @@ appModule.run(function ($rootScope, $location, $http, $timeout, AuthService) {
 
 
 });
-
-
-appModule.run(function(testFactory, AuthService){
-console.log('AuthService.authorized() ' ,AuthService.authorized());
-
-    testFactory.sayGoodbye('holaaa');
-    console.log('siiiii', testFactory.sayGoodbye('holaaa'));
-});
-
-
 
 
